@@ -39,10 +39,11 @@ $(function () {
 
 	var nextPage = function() {
 		var upperPage = getUpperPage();
-		upperPage.addClass('switching')
+		$(".rear-page").addClass('switching')
+		window.setTimeout(function() {$(".rear-page").removeClass('switching');}, 500);
 		upperPage.css('z-index', parseInt(upperPage.css('z-index')) - 3);
 		updateZIndex(1);
-		window.setTimeout(function() {upperPage.removeClass('switching');}, 1000);
+
 		
 	}
 

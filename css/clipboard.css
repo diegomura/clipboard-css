@@ -19,10 +19,17 @@ body {
 	height: 100%;
 	width: 100%;
 
-	-webkit-animation: clipboard 2s;
 	-ms-transform: rotate(6deg); 
 	-webkit-transform: rotate(6deg);
+	-moz-transform: rotate(6deg);
+	-0-transform: rotate(6deg);
 	transform: rotate(6deg);
+
+	-ms-animation: clipboard 2s;
+	-webkit-animation: clipboard 2s;
+	-moz-animation: clipboard 2s;
+	-o-animation: clipboard 2s;
+	animation: clipboard 2s;
 
 }
 
@@ -90,6 +97,7 @@ body {
 
 }
 
+
 .page textarea {
 	height: 510px;
 	width: 370px;
@@ -103,8 +111,10 @@ body {
 	font-size: 90%;
 	font-family: 'Gloria Hallelujah', cursive;
 
+	-ms-box-shadow: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
+    -o-box-shadow: none;
     box-shadow: none;
 }
 
@@ -112,13 +122,18 @@ body {
 	z-index: 22;
 	-ms-transform: rotate(2deg); /* IE 9 */
 	-webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
+	-moz-transform: rotate(2deg);
+	-o-transform: rotate(2deg);
 	transform: rotate(2deg);
 }
+
 
 .page2 {
 	z-index: 21;
 	-ms-transform: rotate(-1deg);
 	-webkit-transform: rotate(-1deg);
+	-moz-transform: rotate(-1deg);
+	-o-transform: rotate(-1deg);
 	transform: rotate(-1deg);
 }
 
@@ -126,9 +141,10 @@ body {
 	z-index: 20;
 	-ms-transform: rotate(1deg);
 	-webkit-transform: rotate(1deg);
+	-moz-transform: rotate(1deg);
+	-o-transform: rotate(1deg);
 	transform: rotate(1deg);
 }
-
 
 
 /* Arrows */
@@ -138,7 +154,11 @@ body {
 	width: 0; 
 	height: 0;
 	top: 50%;
+	-ms-animation: arrow 3s;
 	-webkit-animation: arrow 3s;
+	-moz-animation: arrow 3s;
+	-o-animation: arrow 3s;
+	animation: arrow 3s;
 }
 
 .arrow-right {
@@ -169,6 +189,17 @@ body {
 
 /* Animations */
 
+@-ms-keyframes clipboard {
+  0% {
+    -ms-transform: translate(-1000px, -1000px) rotate(40deg);
+
+  }
+
+  100% {
+    -ms-transform: translate(0px, 0px) rotate(6deg);
+  }
+}
+
 @-webkit-keyframes clipboard {
   0% {
     -webkit-transform: translate(-1000px, -1000px) rotate(40deg);
@@ -180,18 +211,80 @@ body {
   }
 }
 
-@keyframes clipboard {
+@-moz-keyframes clipboard {
   0% {
-    -webkit-transform: translate(-1000px, -1000px) rotate(15deg);
+    -moz-transform: translate(-1000px, -1000px) rotate(40deg);
 
   }
 
   100% {
-    -webkit-transform: translate(0px, 0px) rotate(6deg);
+    -moz-transform: translate(0px, 0px) rotate(6deg);
   }
 }
 
+@-o-keyframes clipboard {
+  0% {
+    -o-transform: translate(-1000px, -1000px) rotate(40deg);
+
+  }
+
+  100% {
+    -o-transform: translate(0px, 0px) rotate(6deg);
+  }
+}
+
+@keyframes clipboard {
+  0% {
+    transform: translate(-1000px, -1000px) rotate(15deg);
+
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(6deg);
+  }
+}
+
+
+
+-ms-keyframes arrow {
+	0%{
+		opacity: 0;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
 @-webkit-keyframes arrow {
+	0%{
+		opacity: 0;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+@-moz-keyframes arrow {
+	0%{
+		opacity: 0;
+	}
+	80% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+
+@-o-keyframes arrow {
 	0%{
 		opacity: 0;
 	}
@@ -214,23 +307,3 @@ body {
 		opacity: 1;
 	}
 }
-
-@-webkit-keyframes switch {
-	0%{
-		-webkit-transform: translate(0px, 0px);
-	}
-
-	50%{
-		-webkit-transform: translate(0px, 0px);
-	}
-	
-	100% {
-		-webkit-transform: translate(0px, 0px);
-	}
-}
-
-
-
-
-
-
