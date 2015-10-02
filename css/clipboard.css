@@ -22,7 +22,7 @@ body {
 	-ms-transform: rotate(6deg); 
 	-webkit-transform: rotate(6deg);
 	-moz-transform: rotate(6deg);
-	-0-transform: rotate(6deg);
+	-o-transform: rotate(6deg);
 	transform: rotate(6deg);
 
 	-ms-animation: clipboard 2s;
@@ -246,8 +246,8 @@ body {
 
 
 
--ms-keyframes arrow {
-	0%{
+@-ms-keyframes arrow {
+	0% {
 		opacity: 0;
 	}
 	80% {
