@@ -9,7 +9,6 @@ $(function () {
 	});
 
 
-
 	// Handle key events
 	$(document).keydown(function(e) {
 		switch(e.which) {
@@ -35,6 +34,10 @@ $(function () {
 		e.preventDefault(); // prevent the default action (scroll / move caret)
 	});
 
+	// Handle unload event
+	$( window ).unload(function() {
+		savePages();
+	});
 
 
 	var nextPage = function() {
@@ -93,9 +96,24 @@ $(function () {
 		});
 	};
 
+	var savePages = function() {
+		if(window.localStorage){
+			for (i=1; i<4; i++){
+				localStorage.setItem("page" + i, $('.page' + i + ' textarea').val());
+			}
+		}
+	};
 
-		
+	var loadPages = function() {
+		if(window.localStorage) {
+			for (i=1; i<4; i++){
+				if (localStorage.getItem('page' + i) != 'null') {
+					$('.page' + i + ' textarea').text(localStorage.getItem('page' + i));
+				}
+			}
+		}
+	};
 
-
+	loadPages();
 
 });

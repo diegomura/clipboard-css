@@ -16,5 +16,4 @@ Works on Safari, Chorme, IE, Firefox and Opera.
 ## TODO
 - Flip page animation
 - Add new page button
-- Storage notes locally in browser
 - Page color panel
